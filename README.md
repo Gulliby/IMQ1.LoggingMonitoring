@@ -1,0 +1,9 @@
+# IMQ1.LoggingMonitoring
+## Полная статистика
+*LOGPARSER "SELECT Text FROM 'FILE NAME'" -i:TEXTLINE -q:Off*
+## Файл отчета
+*LOGPARSER "SELECT Text INTO 'REPORT FILE NAME'" -i:TEXTLINE -q:Off*
+## Всю информацию Info/Debug/Error
+*LOGPARSER "SELECT COUNT(Text) FROM 'FILE NAME' WHERE Text LIKE '%INFO%'" -i:TEXTLINE -q:Off*
+*LOGPARSER "SELECT COUNT(Text) FROM 'FILE NAME' WHERE Text LIKE '%DEBUG%'" -i:TEXTLINE -q:Off*
+*LOGPARSER "SELECT COUNT(Text) FROM 'FILE NAME' WHERE Text LIKE '%ERROR%'" -i:TEXTLINE -q:Off*
